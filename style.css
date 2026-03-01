@@ -241,3 +241,7 @@ input[type="radio"]:checked + label:after {
     object-fit: contain;
     border-radius: 6px;
 }
+
+.powerball-logo {
+    height: 128px;
+}
