@@ -1,14 +1,38 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Gen Gen</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <div class="container">
+        <h1>Lottery Gen Gen</h1>
+        <div class="lottery-selection">
+            <input type="radio" id="mega-millions" name="lottery" value="mega-millions" checked>
+            <label for="mega-millions">Mega Millions</label>
+            <input type="radio" id="powerball" name="lottery" value="powerball">
+            <label for="powerball">Powerball</label>
+        </div>
+        <div id="powerball-options" class="powerball-options">
+            <input type="checkbox" id="power-play" name="power-play">
+            <label for="power-play">Power Play</label>
+            <input type="checkbox" id="double-play" name="double-play">
+            <label for="double-play">Double Play</label>
+        </div>
+        <button id="generate-btn">Generate Numbers</button>
+        <div id="results-container">
+            <div id="main-numbers-container" class="numbers-container"></div>
+            <div id="power-play-container" class="power-play-container"></div>
+            <div id="double-play-container" class="double-play-container">
+                <h2>Double Play Numbers</h2>
+                <div id="double-play-numbers-container" class="numbers-container"></div>
+            </div>
+        </div>
+        <p>Check the latest results on <a href="https://www.usamega.com/" target="_blank">USA Mega</a>.</p>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
