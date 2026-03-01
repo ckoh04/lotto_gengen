@@ -5,6 +5,9 @@ const powerballOptions = document.getElementById("powerball-options");
 const powerPlayContainer = document.getElementById("power-play-container");
 const doublePlayContainer = document.getElementById("double-play-container");
 const doublePlayNumbersContainer = document.getElementById("double-play-numbers-container");
+const themeToggle = document.getElementById("theme-toggle");
+
+const THEME_STORAGE_KEY = "lottery_theme";
 
 const lotteryRules = {
     "mega-millions": {
@@ -22,13 +25,16 @@ const lotteryRules = {
 };
 
 document.querySelectorAll("input[name='lottery']").forEach(radio => {
-    radio.addEventListener("change", (event) => {
-        if (event.target.value === "powerball") {
-            powerballOptions.style.display = "block";
-        } else {
-            powerballOptions.style.display = "none";
-        }
+    radio.addEventListener("change", () => {
+        updateLotteryOptionsVisibility();
     });
+});
+
+themeToggle.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+    localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
 });
 
 generateBtn.addEventListener("click", () => {
@@ -107,3 +113,26 @@ function clearResults() {
     doublePlayContainer.style.display = "none";
     doublePlayNumbersContainer.innerHTML = "";
 }
+
+function updateLotteryOptionsVisibility() {
+    const selectedLottery = document.querySelector("input[name='lottery']:checked").value;
+    powerballOptions.style.display = selectedLottery === "powerball" ? "block" : "none";
+}
+
+function getPreferredTheme() {
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    if (savedTheme === "dark" || savedTheme === "light") {
+        return savedTheme;
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    themeToggle.textContent = `${nextTheme.charAt(0).toUpperCase()}${nextTheme.slice(1)} Mode`;
+    themeToggle.setAttribute("aria-label", `Switch to ${nextTheme} mode`);
+}
+
+applyTheme(getPreferredTheme());
+updateLotteryOptionsVisibility();
