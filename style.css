@@ -201,8 +201,9 @@ input[type="radio"] + label {
     padding-left: 30px;
     cursor: pointer;
     line-height: 20px;
-    display: inline-block;
-    color: #eee;
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
 }
 input[type="radio"] + label:before {
     content: '';
@@ -232,4 +233,11 @@ input[type="radio"]:checked + label:after {
 
 .powerball-options {
     display: none;
+}
+
+.lottery-logo {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
 }
