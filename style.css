@@ -374,6 +374,27 @@ input[type="radio"]:checked + label:after {
     margin: 0.5rem 0;
 }
 
+.info-section ul,
+.info-section ol,
+.legal-content ul,
+.legal-content ol {
+    margin: 0.5rem 0 0.8rem 1.2rem;
+    padding: 0;
+}
+
+.info-section li,
+.legal-content li {
+    margin: 0.35rem 0;
+}
+
+.info-section h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.35rem;
+    color: var(--subheading-color);
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+}
+
 .site-footer {
     margin-top: 1.6rem;
     padding-top: 1rem;
