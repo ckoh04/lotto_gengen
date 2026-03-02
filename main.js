@@ -42,7 +42,7 @@ themeToggle.addEventListener("click", () => {
 businessInquiryToggle.addEventListener("click", () => {
     const isHidden = partnershipSection.classList.toggle("is-hidden");
     businessInquiryToggle.setAttribute("aria-expanded", String(!isHidden));
-    businessInquiryToggle.textContent = isHidden ? "Business Inquiry" : "Hide Business Inquiry";
+    businessInquiryToggle.textContent = isHidden ? "Contact Us" : "Hide Contact Us";
 });
 
 generateBtn.addEventListener("click", () => {
