@@ -114,6 +114,14 @@ h1 {
     color: var(--muted-label);
 }
 
+.lottery-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
 #generate-btn {
     background-color: var(--button-bg);
     color: white;
@@ -203,7 +211,8 @@ input[type="radio"] + label {
     line-height: 20px;
     display: inline-flex;
     align-items: center;
-    min-height: 28px;
+    min-height: 132px;
+    margin: 0;
 }
 input[type="radio"] + label:before {
     content: '';
