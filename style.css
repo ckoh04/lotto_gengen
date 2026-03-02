@@ -260,3 +260,82 @@ input[type="radio"]:checked + label:after {
 .powerball-logo {
     height: 128px;
 }
+
+.partnership-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--divider);
+    text-align: left;
+}
+
+.business-inquiry-trigger {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.business-inquiry-toggle {
+    background: none;
+    border: none;
+    color: var(--link-color);
+    font: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+}
+
+.business-inquiry-toggle:hover {
+    color: var(--button-bg-hover);
+}
+
+.is-hidden {
+    display: none;
+}
+
+.partnership-section h2 {
+    margin-bottom: 0.8rem;
+}
+
+.partnership-form {
+    display: grid;
+    gap: 0.55rem;
+}
+
+.partnership-form label {
+    font-weight: 600;
+    color: var(--muted-label);
+}
+
+.partnership-form input,
+.partnership-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--container-border);
+    background: var(--container-bg);
+    color: var(--text-color);
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.75rem;
+    font: inherit;
+}
+
+.partnership-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.partnership-form button {
+    margin-top: 0.4rem;
+    background-color: var(--button-bg);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.partnership-form button:hover {
+    background-color: var(--button-bg-hover);
+}

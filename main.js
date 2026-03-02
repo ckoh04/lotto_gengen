@@ -6,6 +6,8 @@ const powerPlayContainer = document.getElementById("power-play-container");
 const doublePlayContainer = document.getElementById("double-play-container");
 const doublePlayNumbersContainer = document.getElementById("double-play-numbers-container");
 const themeToggle = document.getElementById("theme-toggle");
+const businessInquiryToggle = document.getElementById("business-inquiry-toggle");
+const partnershipSection = document.getElementById("partnership-section");
 
 const THEME_STORAGE_KEY = "lottery_theme";
 
@@ -35,6 +37,12 @@ themeToggle.addEventListener("click", () => {
     const nextTheme = currentTheme === "dark" ? "light" : "dark";
     applyTheme(nextTheme);
     localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+});
+
+businessInquiryToggle.addEventListener("click", () => {
+    const isHidden = partnershipSection.classList.toggle("is-hidden");
+    businessInquiryToggle.setAttribute("aria-expanded", String(!isHidden));
+    businessInquiryToggle.textContent = isHidden ? "Business Inquiry" : "Hide Business Inquiry";
 });
 
 generateBtn.addEventListener("click", () => {

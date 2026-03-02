@@ -38,6 +38,30 @@
                 <div id="double-play-numbers-container" class="numbers-container"></div>
             </div>
         </div>
+        <p class="business-inquiry-trigger">
+            <button id="business-inquiry-toggle" class="business-inquiry-toggle" type="button" aria-controls="partnership-section" aria-expanded="false">
+                Business Inquiry
+            </button>
+        </p>
+        <section id="partnership-section" class="partnership-section is-hidden">
+            <h2>Business Partnership Inquiry</h2>
+            <form class="partnership-form" action="https://formspree.io/f/xaqdzkvl" method="POST">
+                <input type="hidden" name="_subject" value="New Business Partnership Inquiry">
+                <label for="partner-name">Name</label>
+                <input id="partner-name" name="name" type="text" required>
+
+                <label for="partner-email">Email</label>
+                <input id="partner-email" name="email" type="email" required>
+
+                <label for="partner-company">Company</label>
+                <input id="partner-company" name="company" type="text">
+
+                <label for="partner-message">Inquiry</label>
+                <textarea id="partner-message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Inquiry</button>
+            </form>
+        </section>
         <p>Check the latest results on <a href="https://www.usamega.com/" target="_blank">USA Mega</a>.</p>
     </div>
     <script src="main.js"></script>
