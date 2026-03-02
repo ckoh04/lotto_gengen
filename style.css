@@ -74,6 +74,28 @@ body {
     transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.site-nav a {
+    font-size: 0.95rem;
+    padding: 0.25rem 0.45rem;
+    border-radius: 0.35rem;
+    text-decoration: none;
+    border: 1px solid var(--container-border);
+}
+
+.site-nav a:hover {
+    text-decoration: none;
+    background-color: var(--button-bg);
+    color: #fff;
+}
+
 .top-bar {
     display: flex;
     justify-content: flex-end;
@@ -338,4 +360,49 @@ input[type="radio"]:checked + label:after {
 
 .partnership-form button:hover {
     background-color: var(--button-bg-hover);
+}
+
+.info-section {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--divider);
+    text-align: left;
+}
+
+.info-section p {
+    line-height: 1.5;
+    margin: 0.5rem 0;
+}
+
+.site-footer {
+    margin-top: 1.6rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--divider);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.site-footer a {
+    font-size: 0.95rem;
+}
+
+.legal-page {
+    max-width: 840px;
+}
+
+.legal-content {
+    text-align: left;
+    line-height: 1.6;
+}
+
+.legal-content h2 {
+    margin-top: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.legal-content p,
+.legal-content li {
+    color: var(--text-color);
 }
